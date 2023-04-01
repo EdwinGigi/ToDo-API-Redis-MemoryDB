@@ -20,4 +20,16 @@ todoController.createToDo = async (req, res, next) => {
         next(error);
     }
 };
+todoController.getToDoList = async (req, res, next) => {
+    try {
+        const result = await (await (0, repository_1.default)()).fetch(req.params.id);
+        return res.send({
+            status: 'success',
+            data: result
+        });
+    }
+    catch (error) {
+        next(error);
+    }
+};
 exports.default = todoController;
