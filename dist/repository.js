@@ -6,6 +6,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const redis_om_1 = require("redis-om");
 const redis_client_1 = __importDefault(require("./db/redis.client"));
 class ToDoList extends redis_om_1.Entity {
+    constructor() {
+        super(...arguments);
+        this.name = 'ToDoList';
+        this.completed = 'completed';
+        this.category = 'category';
+        this.date = Date.now();
+    }
 }
 const ToDoListSchema = new redis_om_1.Schema(ToDoList, {
     name: { type: 'string' },

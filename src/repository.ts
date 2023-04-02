@@ -1,7 +1,12 @@
 import { Entity, Schema } from 'redis-om';
 import redisClient  from './db/redis.client';
 
-class ToDoList extends Entity {}
+class ToDoList extends Entity {
+    name = 'ToDoList';
+    completed = 'completed';
+    category = 'category';
+    date = Date.now();
+}
 
 const ToDoListSchema = new Schema(ToDoList, {
     name: { type: 'string'},
