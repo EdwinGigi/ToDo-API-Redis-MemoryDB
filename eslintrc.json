@@ -1,0 +1,43 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "prettier"
+  ],
+  "plugins": [
+    "prettier",
+    "unused-imports"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module"
+  },
+  "rules": {
+    "@typescript-eslint/no-explicit-any": "off",
+    "unused-imports/no-unused-imports": "warn"
+  },
+  "overrides": [
+    {
+      "files": [
+        "*.ts"
+      ],
+      "extends": [
+        "plugin:ngrx/recommended"
+      ],
+	  "rules": {
+		"ngrx/no-store-subscription": "off",
+		"ngrx/avoid-mapping-selectors": "off"
+	  }
+    },
+	{
+		"files": [
+		  "*.html"
+		],
+		"extends": [
+		  "plugin:@angular-eslint/template/recommended"
+		],
+		"rules": {}
+	}
+  ]
+}

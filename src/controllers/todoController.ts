@@ -27,6 +27,5 @@ export default class todoController {
             next(error)
         }
     }
-
 }
 
