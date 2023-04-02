@@ -4,7 +4,7 @@
   "description": "A ToDo application created in TypeScript with Express.js as a web framework for Node.js and Redis integration for AWS MemoryDB configuration.",
   "main": "index.js",
   "scripts": {
-    "start": "node dist/index.js",
+    "start": "nodemon dist/index.js",
     "build": "tsc",
     "dev": "nodemon ./src/app.ts"
   },

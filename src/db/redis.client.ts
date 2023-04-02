@@ -3,10 +3,12 @@ import 'dotenv/config'
 
 // Create a Redis client instance
 export default async function() {
-  const url = process.env.REDIS_URL
+  const host = process.env.REDIS_HOST
+  const REDIS_HOST = process.env.REDIS_HOST
+  const REDIS_PASSWORD = process.env.PASSWORD
   const client = new Client()
-  const redisConn = await client.open(url)
-​
+  const redisConn = await client.open(host)
+
   // To check for connection. you can delete it after we have confirmed our connection is successful
   const dbCheck = await client.execute(['PING']);
   console.log(dbCheck)
