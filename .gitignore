@@ -74,6 +74,10 @@ typings/
 # Next.js build output
 .next
 
+# dotenv environment variables file
+.env
+.env.test
+
 # Nuxt.js build / generate output
 .nuxt
 dist
