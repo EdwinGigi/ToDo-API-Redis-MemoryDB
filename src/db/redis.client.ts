@@ -3,9 +3,7 @@ import 'dotenv/config'
 
 // Create a Redis client instance
 export default async function() {
-  const host = process.env.REDIS_HOST
-  const REDIS_HOST = process.env.REDIS_HOST
-  const REDIS_PASSWORD = process.env.PASSWORD
+  const host = process.env.REDIS_HOST 
   const client = new Client()
   const redisConn = await client.open(host)
 
