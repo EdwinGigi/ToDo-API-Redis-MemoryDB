@@ -1,7 +1,7 @@
 {
   "name": "todo-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "A ToDo application created in TypeScript with Express.js as a web framework for Node.js and Redis integration for AWS MemoryDB configuration.",
   "main": "index.js",
   "scripts": {
     "start": "node dist/index.js",
@@ -9,8 +9,8 @@
     "dev": "nodemon ./src/app.ts"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Edwin Gigi",
+  "license": "MIT",
   "dependencies": {
     "@aws-sdk/client-dynamodb": "^3.299.0",
     "@aws-sdk/client-memorydb": "^3.300.0",
